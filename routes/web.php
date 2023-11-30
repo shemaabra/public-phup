@@ -25,6 +25,17 @@ Route::get('/', function () {
     // $users = DB::delete("delete from users where id=6");
     // dd($user); // dump and die
 
+    //Query Builder
+    $users = DB::table('users')->first(); // list all users
+    // $user = DB::table('users')->insert([
+    //     'name'=>'ammal',
+    //     'email'=> 'ammal@gmail.com',
+    //     'password'=> 'password',
+    // ]); // creating new users
+    // $user = DB::table('users')->where('id', 8)->update(['email'=>'abc@gmail.com']); // update details
+    // $user = DB::table('users')->where('id', 8)->delete(); // delete detail
+    dd($users);
+
 });
 
 Route::get('/dashboard', function () {
