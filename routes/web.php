@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+
+    // Raw Queries in laravel10
+    // $user = DB::select("select * from users");
+    // $users = DB::insert("insert into users(name, email, password) values(?,?,?)", ['example', 'example@gmail.com', 'examplePassword']);
+    // $update  = DB::update("update users set email='exa@gmail.com' where id=6");
+    // $users = DB::delete("delete from users where id=6");
+    // dd($user); // dump and die
+
 });
 
 Route::get('/dashboard', function () {
