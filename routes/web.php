@@ -29,8 +29,8 @@ Route::get('/', function () {
     //Query Builder
     // $users = DB::table('users')->first(); // list all users
     // $user = DB::table('users')->insert([
-    //     'name'=>'ammal',
-    //     'email'=> 'ammal@gmail.com',
+    //     'name'=>'am',
+    //     'email'=> 'am@gmail.com',
     //     'password'=> 'password',
     // ]); // creating new users
     // $user = DB::table('users')->where('id', 8)->update(['email'=>'abc@gmail.com']); // update details
@@ -40,16 +40,16 @@ Route::get('/', function () {
     // $users = User::get();
     // $user = User::create(
     //     [
-    //             'name'=>'ammal',
-    //             'email'=> 'ammal@2gmail.com',
-    //             'password'=> 'password',
+    //             'name'=>'azhaaaa',
+    //             'email'=> 'azhaaaa@gmail.com',
+    //             'password' => 'password',
     //         ]
     // );
     // $user = User::where('id', 10)->update(['name'=> 'cdf']);
-    $user = User::all();
+    $user = User::find(18);
     // $user->update(['name'=> 'kisengo']);
     // $user->delete();
-    dd($user);
+    dd($user->name);
 
 });
 
