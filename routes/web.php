@@ -37,14 +37,18 @@ Route::get('/', function () {
     // $user = DB::table('users')->where('id', 8)->delete(); // delete detail
 
     //Model
-    $users = User::get();
-    $user = User::create(
-        [
-                'name'=>'ammal',
-                'email'=> 'ammal@gmail.com',
-                'password'=> 'password',
-            ]
-    );
+    // $users = User::get();
+    // $user = User::create(
+    //     [
+    //             'name'=>'ammal',
+    //             'email'=> 'ammal@2gmail.com',
+    //             'password'=> 'password',
+    //         ]
+    // );
+    // $user = User::where('id', 10)->update(['name'=> 'cdf']);
+    $user = User::all();
+    // $user->update(['name'=> 'kisengo']);
+    // $user->delete();
     dd($user);
 
 });
